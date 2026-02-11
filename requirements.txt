@@ -1,0 +1,6 @@
+torch>=2.8.0
+diffusers>=0.31.0
+transformers>=4.45.0
+optimum-quanto>=0.2.0
+para-attn
+accelerate

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.env
+.venv/
+venv/
+
+# Generated images
+*.png
+*.jpg
+
+# Experiment results
+*.json
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
