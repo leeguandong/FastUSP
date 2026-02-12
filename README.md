@@ -139,10 +139,14 @@ FastUSP/
 ## Citation
 
 ```bibtex
-@article{li2025fastusp,
-  title={FastUSP: A Multi-Level Optimization Framework for Accelerating Distributed Diffusion Model Inference},
-  author={Li, Guandong and Chu, Zhaobin},
-  year={2025}
+@misc{li2026fastuspmultilevelcollaborativeacceleration,
+      title={FastUSP: A Multi-Level Collaborative Acceleration Framework for Distributed Diffusion Model Inference}, 
+      author={Guandong Li},
+      year={2026},
+      eprint={2602.10940},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2602.10940}, 
 }
 ```
 
