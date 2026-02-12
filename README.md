@@ -1,3 +1,20 @@
+<h3 align="center">
+    FastUSP: A Multi-Level Collaborative Acceleration Framework for Distributed Diffusion Model Inference
+</h3>
+
+<p align="center">
+<a href="https://arxiv.org/abs/2602.10940"><img alt="Build" src="https://img.shields.io/badge/Tech%20Report-DVI-b31b1b.svg"></a>
+<a href="https://github.com/leeguandong/FastUSP"><img src="https://img.shields.io/static/v1?label=GitHub&message=repository&color=green"></a>
+</p>
+
+<p align="center">
+<span style="color:#137cf3; font-family: Gill Sans">Guandong Li</span><sup></sup></a> <br>
+</p>
+
+## Abstract
+
+Large-scale diffusion models such as FLUX (12B parameters) and Stable Diffusion 3 (8B parameters) require multi-GPU parallelism for efficient inference. Unified Sequence Parallelism (USP), which combines Ulysses and Ring attention mechanisms, has emerged as the state-of-the-art approach for distributed attention computation. However, existing USP implementations suffer from significant inefficiencies including excessive kernel launch overhead and suboptimal computation-communication scheduling. In this paper, we propose \textbf{FastUSP}, a multi-level optimization framework that integrates compile-level optimization (graph compilation with CUDA Graphs and computation-communication reordering), communication-level optimization (FP8 quantized collective communication), and operator-level optimization (pipelined Ring attention with double buffering). We evaluate FastUSP on FLUX (12B) and Qwen-Image models across 2, 4, and 8 NVIDIA RTX 5090 GPUs. On FLUX, FastUSP achieves consistent \textbf{1.12$\times$--1.16$\times$} end-to-end speedup over baseline USP, with compile-level optimization contributing the dominant improvement. On Qwen-Image, FastUSP achieves \textbf{1.09$\times$} speedup on 2 GPUs; on 4--8 GPUs, we identify a PyTorch Inductor compatibility limitation with Ring attention that prevents compile optimization, while baseline USP scales to 1.30$\times$--1.46$\times$ of 2-GPU performance. We further provide a detailed analysis of the performance characteristics of distributed diffusion inference, revealing that kernel launch overhead---rather than communication latency---is the primary bottleneck on modern high-bandwidth GPU interconnects.
+
 # FastUSP
 
 A multi-level optimization framework for accelerating distributed diffusion model inference using Unified Sequence Parallelism (USP).
